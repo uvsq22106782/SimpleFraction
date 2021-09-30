@@ -80,7 +80,7 @@ public static void main(String[] args) {
 }
 
 git add src/*
- git add out/*
+
 git commit -m "ajout de to string de la classe fraction avec son constructeur  et methode de test main  "
 
     ```
@@ -129,17 +129,17 @@ Quelle syntaxe est utilisée pour ce fichier ?
     # Copier ici les modifications de `.gitignore`
 
 
-    /out/production/projet/com/uvsqdebbahmehdi/Fraction.class
+   /out/production/projet/com/uvsqdebbahmehdi/Fraction.class
    /out/production/projet/com/uvsqdebbahmehdi/Main.class
   /out/
- /projet.iml
- /.idea/description.html
- /.idea/misc.xml
- /.idea/modules.xml
- /.idea/project-template.xml
- /.idea/runConfigurations.xml
- /.idea/vcs.xml
- /.idea/encodings.xml	
+  /projet.iml
+  /.idea/description.html
+  /.idea/misc.xml
+  /.idea/modules.xml
+  /.idea/project-template.xml
+  /.idea/runConfigurations.xml
+  /.idea/vcs.xml
+  /.idea/encodings.xml	
 
 
 // ajout fichier ingnore au repo distant
@@ -174,15 +174,17 @@ Donnez un exemple.
         ```
     1. compter le nombre de ligne d'un fichier
         ```bash
-        # Répondre ici
+        (Get-Content Main.java).Length
         ```
     1. afficher les lignes du fichier `Main.java` contenant la chaîne `uneVariable`
         ```bash
         # Répondre ici
+	Select-String -Path "Main.java" -Pattern 'uneVariable'
         ```
     1. afficher récursivement les fichiers `.java` contenant la chaîne `uneVariable`
         ```bash
         # Répondre ici
+       Get-ChildItem -Path C:\Users\dell\*.java -Recurse | Select-String -Pattern 'uneVariable' -CaseSensitive
         ```
     1. trouver les fichiers (pas les répertoires) nommés `README.md` dans une arborescence de répertoires
         ```bash
