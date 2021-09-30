@@ -139,12 +139,13 @@ Quelle syntaxe est utilisée pour ce fichier ?
  /.idea/project-template.xml
  /.idea/runConfigurations.xml
  /.idea/vcs.xml
- /.idea/encodings.xml
+ /.idea/encodings.xml	
 
 
 // ajout fichier ingnore au repo distant
 git add .gitignore
-
+git commit -m "ajout du fichier git ignore "
+git push origin
 
 
     ```
@@ -169,7 +170,7 @@ Donnez un exemple.
 1. Donnez la ou les commandes shell permettant de
     1. afficher les fichiers d'un répertoire triés par taille (taille affichée lisiblement)
         ```bash
-        # Répondre ici
+        gci . -r | sort Length -desc | select fullname ,length 
         ```
     1. compter le nombre de ligne d'un fichier
         ```bash
