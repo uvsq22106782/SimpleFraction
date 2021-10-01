@@ -189,6 +189,9 @@ Donnez un exemple.
     1. trouver les fichiers (pas les répertoires) nommés `README.md` dans une arborescence de répertoires
         ```bash
         # Répondre ici
+      Get-ChildItem -Path C:\Users\dell\ -Filter $`README.md` -Recurse | %{$_.FullName}
+Get-ChildItem -Path C:\mehdi\ -Recurse -Force
+Get-ChildItem -Path C:\mehdi\ -Include 'README.md'
         ```
     1. afficher les différences entre deux fichiers textes
         ```bash
@@ -198,9 +201,15 @@ Donnez un exemple.
     * `ssh`
         > Répondre ici
     * `screen`/`tmux`
-        > Répondre ici
+        
+       est un « multiplexeur de terminaux » permettant d'ouvrir plusieurs terminaux dans une même console, 
+         de passer de l'un à l'autre et de les récupérer plus tard.
+    
+
     * `curl`/[HTTPie](https://httpie.org/)
+
         > Répondre ici
+
     * [jq](https://stedolan.github.io/jq/)
         > Répondre ici
 
